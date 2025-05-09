@@ -1,0 +1,112 @@
+/* Center the entire container */
+.streamlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Chango', sans-serif;
+    margin-top: 40px;
+  }
+  
+  /* Style the title */
+  .streamlist-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form container to center and space elements */
+  .form-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the input box */
+  .movie-input {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Style the Add button */
+  .add-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Movie list styles */
+  .movie-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .movie-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.2rem;
+  }
+  
+  /* Completed movies */
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  /* Button group spacing and styling */
+  .movie-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .complete,
+  .edit,
+  .delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .complete {
+    background-color: green;
+  }
+  
+  .edit {
+    background-color: #007bff;
+  }
+  
+  .delete {
+    background-color: red;
+  }
+  
+  .complete:hover {
+    background-color: darkgreen;
+  }
+  
+  .edit:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete:hover {
+    background-color: darkred;
+  }
+  

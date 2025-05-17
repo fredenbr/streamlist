@@ -53,6 +53,7 @@
     max-width: 600px;
   }
   
+  /* List items for StreamList */
   .movie-item {
     display: flex;
     justify-content: space-between;
@@ -108,5 +109,48 @@
   
   .delete:hover {
     background-color: darkred;
+  }
+  
+  /* --- Additional styles for TMDB Search results --- */
+  
+  /* Movie items with poster and info */
+  .movie-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Poster image styling */
+  .movie-poster {
+    width: 100px;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  
+  /* Container for movie details */
+  .movie-info {
+    max-width: 450px;
+  }
+  
+  /* Movie title style */
+  .movie-info h3 {
+    margin: 0 0 8px 0;
+    font-family: 'Chango', cursive;
+    font-size: 1.6rem;
+  }
+  
+  /* Movie details paragraphs */
+  .movie-info p {
+    margin: 4px 0;
+    font-size: 1rem;
+  }
+  
+  /* Overview text style */
+  .overview {
+    font-style: italic;
+    color: #555;
   }
   

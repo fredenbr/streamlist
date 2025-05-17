@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './StreamList.css';
 
 function StreamList() {
+  // Load movies from localStorage or start with an empty array
+  const [movies, setMovies] = useState(() => {
+    const saved = localStorage.getItem('movies');
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [movie, setMovie] = useState('');
-  const [movies, setMovies] = useState([]);
+
+  // Save movies to localStorage whenever movies change
+  useEffect(() => {
+    localStorage.setItem('movies', JSON.stringify(movies));
+  }, [movies]);
 
   const handleChange = (e) => {
     setMovie(e.target.value);

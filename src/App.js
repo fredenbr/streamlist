@@ -4,7 +4,8 @@ import StreamList from './components/StreamList';
 import Movies from './components/Movies';
 import Cart from './components/Cart';
 import About from './components/About';
-import './App.css'; // Add this line to import the CSS file
+import TMDBSearch from './components/TMDBSearch'; // ✅ New component
+import './App.css';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
+        <Route path="/search" element={<TMDBSearch />} /> {/* ✅ New route */}
       </Routes>
     </Router>
   );

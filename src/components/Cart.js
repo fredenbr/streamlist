@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+const STORAGE_KEY = 'shopping_cart';
 
 const ShoppingCart = () => {
-  const [cartItems, setCartItems] = useState([
+  const [cartItems, setCartItems] = useState(([ => {
+    const savedCart = localStorage.getItem(STORAGE_KEY);
+    return savedCart ? JSON.parse(savedCart) : [
     { id: 1, name: 'Lion King', year: 1994, price: 7.99},
     { id: 2, name: 'Lion King', year: 2016, price: 9.99},
   ]);
+});
+
+//Save cart to localStorage when it changes
+useEffect(() => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
+}, [cartItems]);
 
 //Remove an item
 const handleRemove = (itemId) => {
